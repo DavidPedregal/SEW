@@ -114,7 +114,7 @@ section h4 {
 /* Párrafos - Hereda color de section/main/body (#212121) */
 p {
     margin-bottom: 1rem;
-    text-align: justify;
+    /*text-align: justify;*/
     /* color heredado de body: #212121 */
 }
 
