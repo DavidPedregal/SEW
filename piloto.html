@@ -16,109 +16,148 @@
 
 <body>
     <!-- Datos con el contenidos que aparece en el navegador -->
-    <h1>MotoGP Desktop</h1>
-    <nav>
-        <a href="piloto.html" title="Información del piloto">Piloto</a>
-        <a href="circuito.html" title="Información del circuito">Circuito</a>
-        <a href="meteorologia.html" title="Información del circuito">Meteorologia</a>
-        <a href="clasificaciones.html" title="Información del circuito">Clasificaciones</a>
-        <a href="juegos.html" title="Información del circuito">Juegos</a>
-        <a href="ayuda.html" title="Información del circuito">Ayuda</a>
-    </nav>
+    <header>
     
-    <h2>Luca Marini</h2>
-    <p>
-        <a href="https://www.motogp.com/es/riders/luca-marini/5dfc20db-c3c4-4ecd-9c7c-f6cfd042031a?tab=overview">Luca Marini</a>
-        es un piloto de motociclismo Italiano que participa en el Campeonato del Mundo de Motociclismo 
-        de MotoGP con el equipo Repsol Honda Team desde 2024, previamente lo hizo con el Mooney VR46 Racing Team. 
-        También resultó subcampeón de Moto2 en 2020.
-    </p>
+        <h1><a href="index.html">MotoGP Desktop</a></h1>
+        <nav>
+            <a href="piloto.html" title="Información del piloto">Piloto</a>
+            <a href="circuito.html" title="Información del circuito">Circuito</a>
+            <a href="meteorologia.html" title="Información del circuito">Meteorologia</a>
+            <a href="clasificaciones.html" title="Información del circuito">Clasificaciones</a>
+            <a href="juegos.html" title="Información del circuito">Juegos</a>
+            <a href="ayuda.html" title="Información del circuito">Ayuda</a>
+        </nav>
+        
+    </header>
 
-    <picture>
-        <source srcset="multimedia/LucaMarini.jpg" media="(min-width: 800px)">
-        <source srcset="multimedia/LucaMarini465px.jpg" media="(max-width: 465px)" />
-        <source srcset="multimedia/LucaMarini799px.jpg" media="(max-width: 799px)" />
-        <img alt="Imágen de Luca Marini" src="multimedia/LucaMarini.jpg" />
-    </picture>
+    <!--MIGAS DE NAVEGACIÓN-->
+    <p>Estás en: <a href="index.html">Inicio</a> >> Piloto</p>
 
-    <p>
-        Moto 3: Debutó en el Campeonato Mundial de Motogp como piloto invitado en 
-        el Gran Premio de San Marino en 2013, pero su carrera terminó poco después del inicio debido a una indigestión.
-    </p>
+    <main>
+        <h2>Luca Marini</h2>
 
-    <p>
-        Moto2: En 2015, Marini corrió el Gran Premio de San Marino como piloto invitado para el Pons Racing Junior Team en Moto2, 
-        terminando la carrera en vigésimo primer lugar a más de un minuto del líder. El 2 de diciembre de 2015 se hizo oficial la 
-        llegada de Luca Marini al Forward Racing Team, como compañero de equipo de Lorenzo Baldassarri, quien también forma parte 
-        de la VR46 Riders Academy. Marini y Baldassarri continuaron juntos en el Forward Racing Team en 2017.
-    </p>
+        <!-- SECTION: Información biográfica del piloto -->
+        <section>
+            <h3>Biografía</h3>
+            <p>
+                <a href="https://www.motogp.com/es/riders/luca-marini/5dfc20db-c3c4-4ecd-9c7c-f6cfd042031a?tab=overview">Luca Marini</a>
+                es un piloto de motociclismo Italiano que participa en el Campeonato del Mundo de Motociclismo 
+                de MotoGP con el equipo Repsol Honda Team desde 2024, previamente lo hizo con el Mooney VR46 Racing Team. 
+                También resultó subcampeón de Moto2 en 2020.
+            </p>
 
-    <video controls preload="auto">
-        <source src="multimedia/VideoLuca.mp4" type="video/mp4" />
-        <source src="multimedia/VideoLuca.mp4" type="video/webm" />
-        <!--Aquí tiene que ir el webm pero no me va-->
-    </video>
+            <picture>
+                <source srcset="multimedia/LucaMarini.jpg" media="(min-width: 800px)">
+                <source srcset="multimedia/LucaMarini465px.jpg" media="(max-width: 465px)" />
+                <source srcset="multimedia/LucaMarini799px.jpg" media="(max-width: 799px)" />
+                <img alt="Imágen de Luca Marini" src="multimedia/LucaMarini.jpg" />
+            </picture>
+        </section>
 
-    <ul>
-        <li>Fecha de nacimiento: 10/08/1997</li>
-        <li>Lugar de nacimiento: Urbino, Italia</li>
-        <li>Altura: 184cm</li>
-        <li>Peso:69Kg</li>
-        <li>Moto: Honda</li>
-        <li>Dorsal: 10</li>
-    </ul>
+        <!-- SECTION: Trayectoria en categorías inferiores -->
+        <section>
+            <h3>Trayectoria profesional</h3>
+            
+            <h4>Moto3</h4>
+            <p>
+                Debutó en el Campeonato Mundial de Motogp como piloto invitado en 
+                el Gran Premio de San Marino en 2013, pero su carrera terminó poco después del inicio debido a una indigestión.
+            </p>
 
-    <h3>Equipos en los que ha pertenecido</h3>
-    <ol>
-        <li>Twelve Racing (2013)</li>
-        <li>Pons Racing Junior Team (2015)</li>
-        <li>Forward Team (2016-2017)</li>
-        <li>SKY Racing Team VR46 (2018-2020)</li>
-        <li>SKY VR46 Avintia (2021)</li>
-        <li>Mooney VR46 Racing Team (2022-2023)</li>
-        <li>Repsol Honda Team (2024)</li>
-        <li>Honda HRC Castrol (2025)</li>
-    </ol>
+            <h4>Moto2</h4>
+            <p>
+                En 2015, Marini corrió el Gran Premio de San Marino como piloto invitado para el Pons Racing Junior Team en Moto2, 
+                terminando la carrera en vigésimo primer lugar a más de un minuto del líder. El 2 de diciembre de 2015 se hizo oficial la 
+                llegada de Luca Marini al Forward Racing Team, como compañero de equipo de Lorenzo Baldassarri, quien también forma parte 
+                de la VR46 Riders Academy. Marini y Baldassarri continuaron juntos en el Forward Racing Team en 2017.
+            </p>
 
-    <h3>Conceptos de MotoGP</h3>
-    <dl>
-        <dt>MotoGP</dt>
-        <dd>La categoría reina del motociclismo de velocidad, con las motos más rápidas y avanzadas tecnológicamente.</dd>
+            <video controls preload="auto">
+                <source src="multimedia/VideoLuca.mp4" type="video/mp4" />
+                <source src="multimedia/VideoLuca.webm" type="video/webm" />
+            </video>
+        </section>
 
-        <dt>Pole Position</dt>
-        <dd>La primera posición en la parrilla de salida, obtenida por el piloto más rápido en la sesión de clasificación.</dd>
+        <!-- ASIDE: Información tangencial (datos personales) -->
+        <aside>
+            <h3>Datos personales</h3>
+            <ul>
+                <li>Fecha de nacimiento: 10/08/1997</li>
+                <li>Lugar de nacimiento: Urbino, Italia</li>
+                <li>Altura: 184cm</li>
+                <li>Peso:69Kg</li>
+                <li>Moto: Honda</li>
+                <li>Dorsal: 10</li>
+            </ul>
+        </aside>
 
-        <dt>Chasis</dt>
-        <dd>La estructura principal de la moto que soporta todos los componentes. Su diseño afecta el manejo y la estabilidad.</dd>
+        <!-- SECTION: Equipos -->
+        <section>
+            <h3>Equipos en los que ha pertenecido</h3>
+            <ol>
+                <li>Twelve Racing (2013)</li>
+                <li>Pons Racing Junior Team (2015)</li>
+                <li>Forward Team (2016-2017)</li>
+                <li>SKY Racing Team VR46 (2018-2020)</li>
+                <li>SKY VR46 Avintia (2021)</li>
+                <li>Mooney VR46 Racing Team (2022-2023)</li>
+                <li>Repsol Honda Team (2024)</li>
+                <li>Honda HRC Castrol (2025)</li>
+            </ol>
+        </section>
 
-        <dt>Neumáticos Slick</dt>
-        <dd>Neumáticos sin dibujo, utilizados en condiciones secas para ofrecer el máximo agarre en pista.</dd>
+        <!-- SECTION: Conceptos técnicos -->
+        <section>
+            <h3>Conceptos de MotoGP</h3>
+            <dl>
+                <dt>MotoGP</dt>
+                <dd>La categoría reina del motociclismo de velocidad, con las motos más rápidas y avanzadas tecnológicamente.</dd>
 
-        <dt>Highside</dt>
-        <dd>Un tipo de caída peligrosa en la que el piloto es lanzado por el aire debido a la pérdida y recuperación repentina de tracción en la rueda trasera.</dd>
-    </dl>
+                <dt>Pole Position</dt>
+                <dd>La primera posición en la parrilla de salida, obtenida por el piloto más rápido en la sesión de clasificación.</dd>
 
-    <h3>Resultados del piloto en la temporada 2024</h3>
-    <table>
-        <thead>
-            <tr>
-            <th>Puntos</th>
-            <th>Posición final</th>
-            <th>Poles</th>
-            <th>Victorias</th>
-            <th>Podios</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-            <td>14</td>
-            <td>22º</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            </tr>
-        </tbody>
-    </table>
-    <p><a href="https://es.wikipedia.org/wiki/Luca_Marini">Fuente de los resultados</a></p>
+                <dt>Chasis</dt>
+                <dd>La estructura principal de la moto que soporta todos los componentes. Su diseño afecta el manejo y la estabilidad.</dd>
+
+                <dt>Neumáticos Slick</dt>
+                <dd>Neumáticos sin dibujo, utilizados en condiciones secas para ofrecer el máximo agarre en pista.</dd>
+
+                <dt>Highside</dt>
+                <dd>Un tipo de caída peligrosa en la que el piloto es lanzado por el aire debido a la pérdida y recuperación repentina de tracción en la rueda trasera.</dd>
+            </dl>
+
+            <audio controls>
+                <source src="multimedia/ttsMP3.com_VoiceText_2025-10-1_13-36-10.mp3" type="audio/mp3" />
+                <source src="multimedia/ttsMP3.com_VoiceText_2025-10-1_13-36-10.wav" type="audio/wav" />
+            </audio>
+        </section>
+
+        <!-- SECTION: Resultados -->
+        <section>
+            <h3>Resultados 2024</h3>
+            <table>
+                <caption>Resultados Luca Marini en el 2024</caption>
+                <tr>
+                    <th scope="col" id="puntos">Puntos</th>
+                    <th scope="col" id="posicion">Posición final</th>
+                    <th scope="col" id="poles">Poles</th>
+                    <th scope="col" id="victorias">Victorias</th>
+                    <th scope="col" id="podios">Podios</th>
+                </tr>
+                <tr>
+                    <td headers="puntos">14</td>
+                    <td headers="posicion">22º</td>
+                    <td headers="poles">0</td>
+                    <td headers="victorias">0</td>
+                    <td headers="podios">0</td>
+                </tr>
+            </table>
+        </section>
+    </main>
+
+    <!-- FOOTER: Información de pie de página -->
+    <footer>
+        <p><a href="https://es.wikipedia.org/wiki/Luca_Marini">Fuente de los resultados</a></p>
+    </footer>
 </body>
 </html>
