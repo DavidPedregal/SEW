@@ -1,49 +1,58 @@
 /* David Pedregal Ribas UO293738 */
 /* Estilos generales de MotoGP Desktop */
 
-body{
-    font-family: 'Courier New', Courier, monospace;
+body{ /*Especificidad 0,0,1*/
+    /* font-family: 'Courier New', Courier, monospace; */
+    font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
     color: #212121; /* Color de texto principal - heredado por todos los elementos */
     background-color: #ffffff; /* Color de fondo - no se hereda */
 }
 
 /* HEADER - Hereda color de texto de body (#212121) */
-header {
+header { /*Especificidad 0,0,1*/
+    display: flex;
     background-color: #d32f2f; /* Color de fondo primario - no se hereda */
     color: #ffffff; /* Color de texto blanco - heredado por h1 y nav */
     padding: 1rem 2rem;
 }
 
 /* H1 dentro de HEADER - Hereda color blanco (#ffffff) de header */
-header h1 {
+header h1 {  /*Especificidad 0,0,2*/
     font-size: 2rem;
     margin-bottom: 1rem;
     /* color heredado de header: #ffffff */
 }
 
 /* Enlaces dentro de H1 - Hereda color de h1/header */
-header h1 a {
+header h1 a {  /*Especificidad 0,0,3*/
     color: inherit; /* Hereda #ffffff de header explícitamente */
     text-decoration: none;
 }
 
-header h1 a:hover {
+header h1 a:hover {  /*Especificidad 0,1,3*/
     color: #c2c2c2;
     background-color: #b71c1c; /* Variante más oscura del primario - no se hereda */
     /* color heredado: #ffffff */
 }
 
 /* NAV - Hereda color blanco (#ffffff) de header */
-header nav {
+header nav {  /*Especificidad 0,0,2*/
     display: flex;
     gap: 1.5rem;
-    flex-wrap: wrap;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
     /* color heredado de header: #ffffff */
 }
 
+.active { /*Especificidad 0,1,0*/
+    background-color: #b71c1c; /* Variante más oscura del primario - no se hereda */
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+}
+
 /* Enlaces de navegación - Hereda color de nav/header */
-header nav a {
+header nav a { /*Especificidad 0,0,3*/
     color: inherit; /* Hereda #ffffff de header explícitamente */
     text-decoration: none;
     padding: 0.5rem 1rem;
@@ -51,32 +60,33 @@ header nav a {
     transition: background-color 0.3s;
 }
 
-header nav a:hover {
+header nav a:hover { /*Especificidad 0,1,3*/
     color: #c2c2c2;
     background-color: #b71c1c; /* Variante más oscura del primario - no se hereda */
     /* color heredado: #ffffff */
 }
 
 /* MIGAS DE NAVEGACIÓN - Hereda color de body (#212121) */
-body > p {
+body > p { /*Especificidad 0,0,2*/
     padding: 1rem 2rem;
     background-color: #f5f5f5; /* Fondo alternativo - no se hereda */
     color: #757575; /* Color de texto secundario - heredado por contenido */
+    font-size: 0.9rem;
 }
 
 /* Enlaces en migas - Hereda color del párrafo padre */
-body > p a {
+body > p a { /*Especificidad 0,0,3*/
     color: #1976d2; /* Color secundario para enlaces - no heredado, especificado */
     text-decoration: none;
 }
 
-body > p a:hover {
+body > p a:hover { /*Especificidad 0,1,3*/
     text-decoration: underline;
     /* color heredado: #1976d2 */
 }
 
 /* MAIN - Hereda color de body (#212121) */
-main {
+main { /*Especificidad 0,0,1*/
     padding: 2rem;
     max-width: 1200px;
     margin: 0 auto;
@@ -84,7 +94,7 @@ main {
 }
 
 /* H2 - Hereda color de main/body */
-h2 {
+h2 { /*Especificidad 0,0,1*/
     color: #d32f2f; /* Color primario - heredado por contenido inline */
     font-size: 2.5rem;
     margin-bottom: 2rem;
@@ -92,44 +102,44 @@ h2 {
 }
 
 /* SECTION - Hereda color de main/body (#212121) */
-section {
+section { /*Especificidad 0,0,1*/
     margin-bottom: 3rem;
     /* color heredado de main: #212121 */
 }
 
 /* H3 - Hereda color de section/main/body */
-section h3 {
+section h3 { /*Especificidad 0,0,2*/
     color: #1976d2; /* Color secundario - heredado por contenido inline */
     font-size: 1.8rem;
     margin-bottom: 1rem;
 }
 
 /* H4 - Hereda color de section/main/body */
-section h4 {
+section h4 { /*Especificidad 0,0,2*/
     color: #757575; /* Color de texto secundario - heredado por contenido inline */
     font-size: 1.3rem;
     margin: 1.5rem 0 0.5rem 0;
 }
 
 /* Párrafos - Hereda color de section/main/body (#212121) */
-p {
+p { /*Especificidad 0,0,1*/
     margin-bottom: 1rem;
     /*text-align: justify;*/
     /* color heredado de body: #212121 */
 }
 
 /* Enlaces generales - No hereda, se especifica */
-a {
+a { /*Especificidad 0,0,1*/
     color: #1976d2; /* Color secundario para enlaces - no heredado */
     transition: color 0.3s;
 }
 
-a:hover {
+a:hover { /*Especificidad 0,1,1*/
     color: #d32f2f; /* Color primario al hover - no heredado */
 }
 
 /* Imágenes y multimedia */
-picture, img, video, audio {
+picture, img, video, audio { /*Especificidad 0,0,1*/
     display: block;
     max-width: 100%;
     height: auto;
@@ -138,7 +148,7 @@ picture, img, video, audio {
 }
 
 /* ASIDE - Hereda color de main/body (#212121) */
-aside {
+aside { /*Especificidad 0,0,1*/
     background-color: #f5f5f5; /* Fondo alternativo - no se hereda */
     padding: 1.5rem;
     border-left: 4px solid #d32f2f; /* Borde con color primario - no se hereda */
@@ -147,54 +157,54 @@ aside {
 }
 
 /* H3 dentro de ASIDE - Hereda color de aside/main/body */
-aside h3 {
+aside h3 { /*Especificidad 0,0,2*/
     color: #d32f2f; /* Color primario - heredado por contenido inline */
     margin-bottom: 1rem;
 }
 
 /* Listas dentro de ASIDE - Hereda color de aside/main/body (#212121) */
-aside ul {
+aside ul { /*Especificidad 0,0,2*/
     list-style-position: inside;
     /* color heredado de aside: #212121 */
 }
 
-aside li {
+aside li { /*Especificidad 0,0,2*/
     margin-bottom: 0.5rem;
     /* color heredado de aside: #212121 */
 }
 
 /* Listas ordenadas - Hereda color de section/main/body (#212121) */
-ol {
+ol { /*Especificidad 0,0,1*/
     margin-left: 2rem;
     margin-bottom: 1rem;
     /* color heredado de body: #212121 */
 }
 
-ol li {
+ol li { /*Especificidad 0,0,2*/
     margin-bottom: 0.5rem;
     /* color heredado de body: #212121 */
 }
 
 /* Listas de definición - Hereda color de section/main/body (#212121) */
-dl {
+dl { /*Especificidad 0,0,1*/
     margin-bottom: 1rem;
     /* color heredado de body: #212121 */
 }
 
-dt {
+dt { /*Especificidad 0,0,1*/
     font-weight: bold;
     color: #d32f2f; /* Color primario - heredado por contenido inline */
     margin-top: 1rem;
 }
 
-dd {
+dd { /*Especificidad 0,0,1*/
     margin-left: 2rem;
     margin-bottom: 0.5rem;
     /* color heredado de body: #212121 */
 }
 
 /* TABLA - Hereda color de section/main/body (#212121) */
-table {
+table { /*Especificidad 0,0,1*/
     width: 100%;
     border-collapse: collapse;
     margin: 1.5rem 0;
@@ -202,7 +212,7 @@ table {
 }
 
 /* Caption - Hereda color de table/section/main/body */
-caption {
+caption { /*Especificidad 0,0,1*/
     font-weight: bold;
     color: #1976d2; /* Color secundario - heredado por contenido inline */
     margin-bottom: 1rem;
@@ -210,7 +220,7 @@ caption {
 }
 
 /* TH - Hereda color de table pero se sobrescribe */
-th {
+th { /*Especificidad 0,0,1*/
     background-color: #d32f2f; /* Fondo primario - no se hereda */
     color: #ffffff; /* Color blanco - heredado por contenido */
     padding: 1rem;
@@ -219,20 +229,14 @@ th {
 }
 
 /* TD - Hereda color de table/section/main/body (#212121) */
-td {
+td { /*Especificidad 0,0,1*/
     padding: 1rem;
     border: 1px solid #e0e0e0; /* Borde gris claro - no se hereda */
     /* color heredado de table: #212121 */
 }
 
-/* Filas alternadas */
-tr:nth-child(even) {
-    background-color: #f5f5f5; /* Fondo alternativo - no se hereda */
-    /* color heredado de table: #212121 */
-}
-
-/* FOOTER - Hereda color de body (#212121) */
-footer {
+/* FOOTER - Hereda color de body (#212121) QUE ACABO DE QUITAR POR LO QUE SE DIJO EN CLASE*/
+footer { /*Especificidad 0,0,1*/
     background-color: #212121; /* Fondo oscuro - no se hereda */
     color: #ffffff; /* Color blanco - heredado por p y a */
     padding: 2rem;
@@ -240,35 +244,25 @@ footer {
 }
 
 /* Enlaces en FOOTER - Hereda color de footer pero se especifica */
-footer a {
+footer a { /*Especificidad 0,0,2*/
     color: #1976d2; /* Color secundario - no heredado, especificado */
     text-decoration: none;
 }
 
-footer a:hover {
+footer a:hover { /*Especificidad 0,1,2*/
     color: #ffffff; /* Color blanco al hover - no heredado */
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    header {
-        padding: 1rem;
-        /* color heredado: #ffffff */
-    }
-    
-    header nav {
+@media (min-width: 320px) and (max-width: 799px){
+    header nav{
         flex-direction: column;
-        gap: 0.5rem;
-        /* color heredado: #ffffff */
     }
-    
-    main {
-        padding: 1rem;
-        /* color heredado: #212121 */
+
+    body > p {
+        display:none;
     }
-    
-    h2 {
-        font-size: 2rem;
-        /* color especificado: #d32f2f */
+    Video,audio {
+        width:100%;
+        height:auto;
     }
 }

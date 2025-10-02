@@ -20,7 +20,8 @@
     
         <h1><a href="index.html">MotoGP Desktop</a></h1>
         <nav>
-            <a href="piloto.html" title="Información del piloto">Piloto</a>
+            <a class="active" href="piloto.html" title="Información del piloto">Piloto</a> 
+            <!--CLASS PERMITIDO POR P3.2-->
             <a href="circuito.html" title="Información del circuito">Circuito</a>
             <a href="meteorologia.html" title="Información del circuito">Meteorologia</a>
             <a href="clasificaciones.html" title="Información del circuito">Clasificaciones</a>
@@ -31,7 +32,7 @@
     </header>
 
     <!--MIGAS DE NAVEGACIÓN-->
-    <p>Estás en: <a href="index.html">Inicio</a> >> Piloto</p>
+    <p>Estás en: <a href="index.html">Inicio</a> >> <strong>Piloto</strong></p>
 
     <main>
         <h2>Luca Marini</h2>
@@ -53,6 +54,19 @@
                 <img alt="Imágen de Luca Marini" src="multimedia/LucaMarini.jpg" />
             </picture>
         </section>
+
+        <!-- ASIDE: Información tangencial (datos personales) -->
+        <aside>
+            <h3>Datos personales</h3>
+            <ul>
+                <li>Fecha de nacimiento: 10/08/1997</li>
+                <li>Lugar de nacimiento: Urbino, Italia</li>
+                <li>Altura: 184cm</li>
+                <li>Peso:69Kg</li>
+                <li>Moto: Honda</li>
+                <li>Dorsal: 10</li>
+            </ul>
+        </aside>
 
         <!-- SECTION: Trayectoria en categorías inferiores -->
         <section>
@@ -77,19 +91,6 @@
                 <source src="multimedia/VideoLuca.webm" type="video/webm" />
             </video>
         </section>
-
-        <!-- ASIDE: Información tangencial (datos personales) -->
-        <aside>
-            <h3>Datos personales</h3>
-            <ul>
-                <li>Fecha de nacimiento: 10/08/1997</li>
-                <li>Lugar de nacimiento: Urbino, Italia</li>
-                <li>Altura: 184cm</li>
-                <li>Peso:69Kg</li>
-                <li>Moto: Honda</li>
-                <li>Dorsal: 10</li>
-            </ul>
-        </aside>
 
         <!-- SECTION: Equipos -->
         <section>
@@ -152,12 +153,8 @@
                     <td headers="podios">0</td>
                 </tr>
             </table>
+            <p><a href="https://es.wikipedia.org/wiki/Luca_Marini">Fuente de los resultados</a></p>
         </section>
     </main>
-
-    <!-- FOOTER: Información de pie de página -->
-    <footer>
-        <p><a href="https://es.wikipedia.org/wiki/Luca_Marini">Fuente de los resultados</a></p>
-    </footer>
 </body>
 </html>
