@@ -2,7 +2,6 @@
 /* Estilos generales de MotoGP Desktop */
 
 body{ /*Especificidad 0,0,1*/
-    /* font-family: 'Courier New', Courier, monospace; */
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
 }
@@ -11,6 +10,7 @@ body{ /*Especificidad 0,0,1*/
 header { /*Especificidad 0,0,1*/
     display: flex;
     padding: 1rem 2rem;
+    justify-content: space-between;
 }
 
 /* H1 dentro de HEADER - Hereda color blanco (#ffffff) de header */
@@ -22,15 +22,15 @@ header h1 {  /*Especificidad 0,0,2*/
 
 /* Enlaces dentro de H1 - Hereda color de h1/header */
 header h1 a {  /*Especificidad 0,0,3*/
-    color: inherit; /* Hereda #ffffff de header explícitamente */
     text-decoration: none;
 }
 
 /* NAV - Hereda color blanco (#ffffff) de header */
 header nav {  /*Especificidad 0,0,2*/
     display: flex;
-    gap: 1.5rem;
+    gap: 0.7rem;
     flex-direction: row;
+    align-items: center;
     /* color heredado de header: #ffffff */
 }
 
@@ -206,9 +206,13 @@ footer a { /*Especificidad 0,0,2*/
     text-decoration: none;
 }
 
-@media (min-width: 320px) and (max-width: 799px){
+@media (max-width: 799px){
+    header {
+        flex-direction: column;
+    }
     header nav{
         flex-direction: column;
+        /* Redefinición para adaptabilidad web*/
     }
 
     body > p {
@@ -217,5 +221,6 @@ footer a { /*Especificidad 0,0,2*/
     Video,audio {
         width:100%;
         height:auto;
+        /* Height redefinido para preservar la adaptabilidad web */ 
     }
 }
